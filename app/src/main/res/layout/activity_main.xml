@@ -18,14 +18,14 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/logoImage"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/main_logo_pizza" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/logoText"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="2"
@@ -43,13 +43,13 @@
             android:layout_gravity="center_vertical">
 
             <ImageView
-                android:id="@+id/imageButton"
+                android:id="@+id/starImage"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:srcCompat="@drawable/star_unfilled" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/savedText"
                 android:layout_width="wrap_content"
                 android:layout_height="25dp"
                 android:text="0"
@@ -76,7 +76,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/ingredientsHint"
             android:layout_width="200dp"
             android:layout_height="35dp"
             android:layout_marginBottom="5dp"
@@ -85,13 +85,13 @@
             android:text="Ingredients:"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
-            app:layout_constraintEnd_toStartOf="@+id/textView3"
+            app:layout_constraintBottom_toTopOf="@+id/ingredientsTextLayout"
+            app:layout_constraintEnd_toStartOf="@+id/dietResHint"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/dietResHint"
             android:layout_width="100dp"
             android:layout_height="35dp"
             android:layout_marginBottom="5dp"
@@ -100,34 +100,35 @@
             android:text="Dietary\nRestrictions:"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/spinner"
+            app:layout_constraintBottom_toTopOf="@+id/dietResSpinner"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintStart_toEndOf="@+id/ingredientsHint"
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout"
+            android:id="@+id/ingredientsTextLayout"
             android:layout_width="200dp"
             android:layout_height="60dp"
-            app:layout_constraintEnd_toStartOf="@+id/spinner"
+            app:layout_constraintEnd_toStartOf="@+id/dietResSpinner"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2">
+            app:layout_constraintTop_toBottomOf="@+id/ingredientsHint">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ingredientsText"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Spinner
-            android:id="@+id/spinner"
+            android:id="@+id/dietResSpinner"
             android:layout_width="100dp"
             android:layout_height="60dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textInputLayout"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            app:layout_constraintStart_toEndOf="@+id/ingredientsTextLayout"
+            app:layout_constraintTop_toBottomOf="@+id/dietResHint" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/searchButton"
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:layout_marginTop="5dp"
@@ -150,7 +151,7 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/resultsHeader"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/biz_udmincho_bold"
@@ -168,7 +169,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+            app:layout_constraintTop_toBottomOf="@+id/resultsHeader" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
