@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/biz_udmincho</item>
+        <item>@font/biz_udmincho_bold</item>
+    </array>
+</resources>
