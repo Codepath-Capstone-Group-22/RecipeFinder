@@ -23,11 +23,11 @@
 - Find what app is streaming a show/movie
 
 - Translator: Input a phrase -> Select a language -> It gets translated lol
-- Mini Trivia: Select a genre/dificulty/etc and display a question (like a minigame?) **
+- Mini Trivia: Select a genre/difficulty/etc and display a question (like a minigame?) **
 
 
 Lifestyle
--To creat app that can show different county with their life style icluding picture and some information about their place *
+-To create app that can show different county with their life style including picture and some information about their place *
 
 - store/product list allowing addition to cart
 - joke generator based off of keyword *
