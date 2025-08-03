@@ -11,59 +11,58 @@
 
 ### Description 
 
-**Description of your app**
+**RecipeFinder is a simple, user-friendly Android app that lets users find recipes by entering a list of ingredients and selecting dietary restrictions. It utilizes the Spoonacular API to fetch and display recipe results. Users can "save" or "favorite" recipes to view them later.**
 
 ### App Evaluation
 
 <!-- Evaluation of your app across the following attributes -->
 
-- **Category:**
-- **Mobile:**
-- **Story:**
-- **Market:**
-- **Habit:**
-- **Scope:**
+- **Category:** Lifestyle
+- **Mobile:**  The app is built for mobile, with quick input and a smooth, responsive design.
+- **Story:** It helps answer the common question, “What can I cook with what I have?”, which is something many people deal with.
+- **Market:** It can be useful for lots of people, especially home cooks, students, and anyone with dietary needs.
+- **Habit:** People might use it a few times a week when cooking or planning meals.
+- **Scope:** The basic version is simple enough to build, but still useful and worth showing.
 
 ## Product Spec
 
 ### 1. User Features (Required and Optional)
 
 Required Features:
-
-- **fill in here**
-- ...
+- [x] User can enter a list of ingredients (comma-separated)
+- [x] User can select one dietary filter (e.g., vegan, gluten-free)
+- [x] App fetches recipes from the API based on the search
+- [x] Recipes are displayed in a scrollable RecyclerView
 
 Stretch Features:
-
-- **fill in here**
-- ...
+- [ ] User can tap "Save" on a recipe to increase a saved count
+- [ ] Saved count is displayed in the UI
+- [ ] Saved count stays after app is reloaded
 
 ### 2. Chosen API(s)
 
-- **list first API endpoint here**
-  - **list associated required feature here**
-  - ...
-- ...
+- Endpoint: `https://api.spoonacular.com/recipes/complexSearch`
+    - Used to fetch recipes based on ingredients and dietary restrictions
+    - Supports filters like includeIngredients, diet, number, apiKey...
+    - Associated Required Feature: Fetch and display recipes matching user input
 
 ### 3. User Interaction
+Required Features:
+- [x] User enters ingredients and taps "Search" > App calls Spoonacular API and displays recipe results
+- [x] User selects dietary restriction(s) and taps "Search" > App calls Spoonacular API and displays recipe results
+- [ ] User taps "Save" on a recipe card > Saved count increases and updates in the UI
 
-Required Feature
-
-- **list first user action here**
-  - => **list result of user action here**
-  - ...
-- **list second user action here**
-  - => **list result of user action here**
-  - ...
+Stretch Features:
+- [ ] User opens the app again later > Saved count remains?
 
 ## Wireframes
 
 <!-- Add picture of your hand sketched wireframes in this section -->
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+Our initial digital wireframe:
+<img src="https://i.imgur.com/OUfJa1O.png" width=600>
 
-### [BONUS] Digital Wireframes & Mockups
-
-### [BONUS] Interactive Prototype
+Our final hand sketched wireframe:
+<img src="https://i.imgur.com/ZctfMo2.png" width=600>
 
 ## Build Notes
 
@@ -74,7 +73,7 @@ For Milestone 2, include **2+ Videos/GIFs** of the build process here!
 
 ## License
 
-Copyright **yyyy** **your name**
+Copyright **2025** **your name**
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
