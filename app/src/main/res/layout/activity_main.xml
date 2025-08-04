@@ -5,22 +5,27 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/antiquewhite">
 
+    <!--- HEADER OF THE APP -->
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:maxHeight="150dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40dp"
+        android:gravity="center_vertical"
+
+        android:padding="10dp">
 
         <ImageView
             android:id="@+id/logoImage"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/main_logo_pizza" />
 
@@ -33,12 +38,13 @@
             android:gravity="center_vertical|center_horizontal"
             android:text="RecipeFinder"
             android:textAllCaps="false"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/sinopia"/>
 
         <FrameLayout
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_weight="1"
             android:layout_gravity="center_vertical">
 
@@ -63,55 +69,40 @@
         </FrameLayout>
     </LinearLayout>
 
+    <!--- SEARCH BAR -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="170dp"
-        android:layout_marginTop="1dp"
-        android:maxHeight="170dp"
-        android:paddingHorizontal="10dp"
-        android:paddingVertical="5dp"
+        android:layout_height="200dp"
+        android:padding="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rounded_bg"
+        >
 
         <TextView
             android:id="@+id/ingredientsHint"
             android:layout_width="200dp"
-            android:layout_height="35dp"
-            android:layout_marginBottom="5dp"
+            android:layout_height="30dp"
             android:fontFamily="@font/biz_udmincho"
-            android:gravity="center_vertical"
             android:text="Ingredients:"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/ingredientsTextLayout"
-            app:layout_constraintEnd_toStartOf="@+id/dietResHint"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/dietResHint"
-            android:layout_width="100dp"
-            android:layout_height="35dp"
-            android:layout_marginBottom="5dp"
-            android:fontFamily="@font/biz_udmincho"
             android:gravity="center_vertical|center_horizontal"
-            android:text="Dietary\nRestrictions:"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/dietResSpinner"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/ingredientsHint"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/ingredientsTextLayout"
             android:layout_width="200dp"
             android:layout_height="60dp"
-            app:layout_constraintEnd_toStartOf="@+id/dietResSpinner"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ingredientsHint">
+            app:layout_constraintTop_toBottomOf="@+id/ingredientsHint"
+            android:padding="0dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ingredientsText"
@@ -119,60 +110,63 @@
                 android:layout_height="match_parent" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <TextView
+            android:id="@+id/dietResHint"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:fontFamily="@font/biz_udmincho"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Dietary\nRestrictions:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/ingredientsHint"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <Spinner
             android:id="@+id/dietResSpinner"
-            android:layout_width="100dp"
+            android:layout_width="130dp"
             android:layout_height="60dp"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/ingredientsTextLayout"
-            app:layout_constraintTop_toBottomOf="@+id/dietResHint" />
+            app:layout_constraintTop_toBottomOf="@+id/dietResHint"/>
 
         <Button
             android:id="@+id/searchButton"
-            android:layout_width="150dp"
+            android:layout_width="200dp"
             android:layout_height="50dp"
-            android:layout_marginTop="5dp"
             android:text="Search"
-            android:background="@drawable/rounded_button_background"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1" />
+            app:layout_constraintVertical_bias="1"
+            android:backgroundTint="@color/pantoneorange"
+            android:layout_marginTop="10dp"
+            />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--- RESULTS  -->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/resultsConstraintLayout"
-        android:layout_width="409dp"
-        android:layout_height="508dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
-        <TextView
-            android:id="@+id/resultsHeader"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/biz_udmincho_bold"
-            android:gravity="center_vertical|center_horizontal"
-            android:text="Results"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/recyclerView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
-            android:layout_width="407dp"
-            android:layout_height="485dp"
-            android:layout_marginTop="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/resultsHeader" />
+            app:layout_constraintStart_toStartOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,4 +2,14 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="red">#FFFF0000</color>
+    <color name="blue">#FF0000FF</color>
+    <color name="green">#FF00FF00</color>
+
+    <color name="chocolatecosmos">#4F070D</color>
+    <color name="sinopia">#D32701</color>
+    <color name="pantoneorange">#FF670D</color>
+    <color name="antiquewhite">#FCE5CD</color>
+    <color name="vanilla">#E8E0B2</color>
+    <color name="yellowgreen">#ABD05F</color>
 </resources>
