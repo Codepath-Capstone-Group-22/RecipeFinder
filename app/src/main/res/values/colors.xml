@@ -12,4 +12,8 @@
     <color name="antiquewhite">#FCE5CD</color>
     <color name="vanilla">#E8E0B2</color>
     <color name="yellowgreen">#ABD05F</color>
+
+    <color name="login_bg">#FFF9C4</color>
+    <color name="login_button">#1976D2</color>
+    <color name="button_text">#FFFFFF</color>
 </resources>
