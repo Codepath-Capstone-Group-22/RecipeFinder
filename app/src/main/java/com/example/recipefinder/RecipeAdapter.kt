@@ -1,4 +1,6 @@
 package com.example.recipefinder
+import android.text.Html
+import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,7 +29,11 @@ class RecipeAdapter (private val recipeList: List<RecipeItem>, private val liste
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = recipeList[position]
-        holder.recipeName.text = item.name
+        holder.recipeName.text = Html.fromHtml(
+            "<a href=\"${item.recipeUrl}\">${item.name}</a>",
+            Html.FROM_HTML_MODE_LEGACY
+        )
+        holder.recipeName.movementMethod = LinkMovementMethod.getInstance()
         holder.recipeDescription.text = item.summary
         holder.recipeIngredients.text = item.ingredients
         if (item.imageUrl.isNotEmpty()) {
