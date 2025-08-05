@@ -59,4 +59,7 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation("com.codepath.libraries:asynchttpclient:2.2.0")
+    implementation ("com.loopj.android:android-async-http:1.4.11")
+
+
 }
