@@ -35,9 +35,8 @@ Required Features:
 - [x] Recipes are displayed in a scrollable RecyclerView
 
 Stretch Features:
-- [ ] User can tap "Save" on a recipe to increase a saved count
-- [ ] Saved count is displayed in the UI
-- [ ] Saved count stays after app is reloaded
+- [x] User can tap "Save" on a recipe to increase a saved count
+- [x] Saved count is displayed in the UI
 
 ### 2. Chosen API(s)
 
@@ -50,10 +49,9 @@ Stretch Features:
 Required Features:
 - [x] User enters ingredients and taps "Search" > App calls Spoonacular API and displays recipe results
 - [x] User selects dietary restriction(s) and taps "Search" > App calls Spoonacular API and displays recipe results
-- [ ] User taps "Save" on a recipe card > Saved count increases and updates in the UI
 
 Stretch Features:
-- [ ] User opens the app again later > Saved count remains?
+- [x] User taps "Save" on a recipe card > Saved count increases and updates in the UI
 
 ## Wireframes
 
@@ -66,14 +64,13 @@ Our final hand sketched wireframe:
 
 ## Build Notes
 
-Here's a place for any other notes on the app, it's creation 
-process, or what you learned this unit!  
+[Watch the video](https://codepath.slack.com/files/U08V1MCNKKJ/F098AAHQQKH/1000005127.mp4)
 
-For Milestone 2, include **2+ Videos/GIFs** of the build process here!
+<img src="https://i.imgur.com/cJ74uFt.gif" width=600>
 
 ## License
 
-Copyright **2025** **your name**
+Copyright **2025** **Asia Omary, Heather Rubio, Vivian Ma, Emily Wang, Ricki Beckless, Xitlaly Prado**
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
