@@ -10,7 +10,7 @@ Submitted by:
 - **Ricki Beckless**
 - **Xitlaly Prado**
 
-Time spent: **X** hours spent in total
+Time spent: **20** hours spent in total
 
 ## Summary
 
@@ -27,11 +27,11 @@ The following REQUIRED features are completed:
 
 The following REQUIRED files are included:
 
-- [ ] Updated 📄 `project_spec.md`, which contains:
-    - [ ] App Overview (Milestone 1)
-    - [ ] App Spec (Milestone 1)
-    - [ ] Checked off 2+ completed features
-    - [ ] 2+ Videos/GIFs of build progress
+- [x] Updated 📄 `project_spec.md`, which contains:
+    - [x] App Overview (Milestone 1)
+    - [x] App Spec (Milestone 1)
+    - [x] Checked off 2+ completed features
+    - [x] 2+ Videos/GIFs of build progress
 
 - [ ] Our 🎥 Demo Video
     - [ ] We have also added the Demo Video Link to the Group Info Form on the course portal.
