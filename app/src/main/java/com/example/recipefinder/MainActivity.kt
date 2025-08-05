@@ -9,7 +9,9 @@ import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Spinner
+import android.widget.TextView
 import androidx.core.text.HtmlCompat
 import com.codepath.asynchttpclient.AsyncHttpClient
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -38,7 +40,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         recyclerView = findViewById(R.id.recyclerView)
-        adapter = RecipeAdapter(recipeList)
+        adapter = RecipeAdapter(recipeList, object : RecipeAdapter.OnRecipeInteractionListener {
+            override fun onRecipeSaved(savedCount: Int) {
+                updateHeader(savedCount)
+            }
+        })
+
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
 
@@ -115,7 +122,8 @@ class MainActivity : AppCompatActivity() {
                                 summary = summary,
                                 imageUrl = imageUrl,
                                 ingredients = ingredientsSummary,
-                                recipeUrl = recipeUrl
+                                recipeUrl = recipeUrl,
+                                saved = false
                             )
                         )
                     }
@@ -137,5 +145,15 @@ class MainActivity : AppCompatActivity() {
                 Log.e("RecipeFinder", "API call failed: $errorResponse")
             }
         })
+    }
+
+    private fun updateHeader(savedCount: Int) {
+        val savedTextView = findViewById<TextView>(R.id.savedText)
+        val starImageView = findViewById<ImageView>(R.id.starImage)
+
+        savedTextView.text = savedCount.toString()
+
+        val newStar = if (savedCount > 0) R.drawable.star_filled else R.drawable.star_unfilled
+        starImageView.setImageResource(newStar)
     }
 }

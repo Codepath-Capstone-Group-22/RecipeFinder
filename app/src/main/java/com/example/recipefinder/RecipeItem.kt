@@ -6,5 +6,6 @@ data class RecipeItem(
     val ingredients: String,
     val summary: String,
     val imageUrl: String,
-    val recipeUrl: String
+    val recipeUrl: String,
+    var saved: Boolean
 )
