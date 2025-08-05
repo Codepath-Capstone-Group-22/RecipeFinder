@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var adapter: RecipeAdapter
     private val recipeList = ArrayList<RecipeItem>()
     private lateinit var dietSpinner: Spinner
-    val apiKey = ""
+    val apiKey = "97b3a462e56e42848b7b594bb7a68755"
 
 
 
